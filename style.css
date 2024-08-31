@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+}
+
+.main h1 {
+    font-weight: 400;
+}
+
+.hero{
+    width: 100%;
+    background-color: #e4f2fd;
+    padding:  50px;
+    display: flex;
+}
+
+.nav{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5372ef;   
+    color: white;
+}
+
+.hero .left {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .left form label h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.hero .left form input {
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.hero .left form button {
+    height: 50px;
+    padding: 0 20px;
+    background-color: #5372ef;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.hero .left form span {
+    position: relative;
+}
+
+.hero .left form span::before {
+    content: '';
+    width: 45%;
+    height: 2px;
+    background-color: #d2dee7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.hero .left form span::after {
+    content: '';
+    width: 45%;
+    height: 2px;
+    background-color: #d2dee7;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.hero .left form span p {
+    text-align: center;
+}
+
+.hero > .right {
+    width: 65%;
+    margin-left: 50px;
+}
+
+.hero .right .weather {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #5372ef;
+    border-radius: 6px;
+    padding: 20px;
+    color: white;
+}
+
+.hero .right .weather .left {
+    width: 100%;
+}
+
+.hero .right .weather .left p {
+    margin-top: 10px;
+}
+
+.hero .right .weather .right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .right .weather .right img {
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.hero > .right > h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.hero .right .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero .right .cards .card {
+    height: 200px;
+    background-color: #6c757e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.hero .right .cards .card img {
+    height: 30px;
+    width: 30px;
+    margin: 5px 0;
+}
+
+.hero .right .cards .card span {
+    margin-top: 6px;
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .hero .left form label h1 {
+        text-align: center;
+    }
+    .hero > .right > h1 {
+        text-align: center;
+    }
+    .hero .right {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero .left {
+        width: 50%;
+    }
+    .hero > .right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero .left {
+        width: 100%;
+    }
+    .hero >.right {
+        width: 100%;
+        margin-left: 0;
+    }
+    .hero .right .weather  {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero .right .weather .left {
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .hero .right .weather .left p {
+        width: fit-content;
+    }
+    .hero .right .weather .right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero .right .weather .left h1 {
+        font-size: 20px;
+    }
+    .hero .right .cards {
+        justify-content: center;
+    }
+    .hero .right .cards .card {
+        width: 100%;
+    }
+}
